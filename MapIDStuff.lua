@@ -26,13 +26,6 @@ if GetCurrentMapZone == nil then
 	end
 end
 
-function PrintMapRectOnMap()
-	local mapId = WorldMapFrame:GetMapID()
-	local mapInfo = C_Map.GetMapInfo(mapId)
-	local X1, X2, Y1, Y2 = C_Map.GetMapRectOnMap(mapId, mapInfo.parentMapID)
-	print(mapId.." "..X1.." "..X2.." "..Y1.." "..Y2)
-end
-
 if GetCurrentDisplayedMapAreaID == nil then
 	GetCurrentDisplayedMapAreaID = function()
 		return C_Map.GetCurrentMapID()
